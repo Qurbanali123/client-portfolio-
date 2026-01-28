@@ -1,4 +1,5 @@
 "use client";
+import { easeInOut } from "framer-motion"
 import probillingLogo from '../app/probilling.png';
 import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
