@@ -1,5 +1,5 @@
 "use client";
-import { easeInOut } from "framer-motion"
+import { easeInOut, easeOut } from "framer-motion"; // import easing functions
 import probillingLogo from '../app/probilling.png';
 import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
@@ -15,7 +15,7 @@ const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut" }
+  transition: { duration: 0.6, ease: easeOut } // ✅ use function instead of string
 };
 
 const staggerContainer = {
