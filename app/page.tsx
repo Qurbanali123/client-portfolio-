@@ -337,11 +337,11 @@ export default function Home() {
         </h2>
 
         <h3 className="text-4xl font-bold text-[#112b5d] mb-6">
-          CEO of ProBilling Circle
+          Founder of ProBilling Circle
         </h3>
 
         <p className="text-[#112b5d]/70 text-lg leading-relaxed mb-6">
-          As the CEO of <strong>ProBilling Circle</strong>, I am committed to
+          As the Founder of <strong>ProBilling Circle</strong>, I am committed to
           delivering accurate, compliant, and scalable medical billing solutions
           that help healthcare providers maximize revenue and reduce claim denials.
         </p>
@@ -459,13 +459,13 @@ export default function Home() {
               <p className="text-[#112b5d]/60 mb-10 text-lg">
                 Ready to reduce denials and increase your revenue? Contact us today for a free practice analysis.
               </p>
-  <div className="space-y-6">
+<div className="space-y-6">
   {[
     { 
       icon: <Mail className="w-5 h-5" />, 
       label: "Email Us", 
       value: "harun_hanif@outlook.com",
-      link: "mailto:harun_hanif@outlook.com" // ✅ Email redirect
+      link: "mailto:harun_hanif@outlook.com"
     },
     { 
       icon: <Globe className="w-5 h-5" />, 
@@ -477,6 +477,12 @@ export default function Home() {
       label: "WhatsApp", 
       value: "+92 321 5513687",
       link: "https://wa.me/923215513687"
+    },
+    { 
+      icon: <Globe className="w-5 h-5" />, 
+      label: "WhatsApp Channel", 
+      value: "Follow the ProBilling Circle (PBC)",
+      link: "https://whatsapp.com/channel/0029VbBz1I90VycFrd7AyF47"
     }
   ].map((item, idx) => (
     <motion.div 
@@ -504,6 +510,7 @@ export default function Home() {
     </motion.div>
   ))}
 </div>
+
 
 
 
