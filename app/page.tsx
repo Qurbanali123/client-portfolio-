@@ -52,7 +52,8 @@ export default function Home() {
     { title: "Patient Billing", description: "Clear and professional patient statements and compassionate billing support.", icon: <Users className="w-6 h-6" /> },
   ];
 
-  const software = ["Kareo", "AdvancedMD", "Athena", "eClinicalWorks", "NextGen"];
+  const software = ["Kareo", "AdvancedMD", "Athena", "eClinicalWorks", "NextGen","OfficeAlly", "ECW", 
+"Simple Practice","Session","Optimentra"];
   const portals = ["Availity", "UnitedHealthcare", "Aetna", "Blue Cross Blue Shield"];
   const specialties = ["Family Practice", "Internal Medicine", "Mental Health", "Pediatrics", "Inpatient & Outpatient", "Home Health"];
   
@@ -84,7 +85,7 @@ export default function Home() {
           >
   
 
-<div className="relative w-10 h-10 sm:w-24 sm:h-20 md:w-26 md:h-26 transition-transform group-hover:scale-110">
+<div className="relative w-15 h-15 sm:w-26 sm:h-22 md:w-28 md:h-28 transition-transform group-hover:scale-110">
   <Image
     src="/probilling.png"
     alt="Pro Billing Circle Logo"
@@ -303,6 +304,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* CEO Section */}
+<section id="ceo" className="py-24 px-6 bg-white relative">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* CEO Image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="flex justify-center"
+      >
+        <div className="relative group">
+          <div className="absolute inset-0 bg-[#1579b7]/20 rounded-3xl blur-2xl group-hover:scale-110 transition-transform duration-700" />
+          <img
+            src="/ceo.jpeg" // 🔁 replace with your image path
+            alt="CEO of ProBilling Circle"
+            className="relative w-80 h-80 object-cover rounded-3xl shadow-2xl"
+          />
+        </div>
+      </motion.div>
+
+      {/* CEO Content */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-[#1579b7] font-bold uppercase tracking-widest text-sm mb-4">
+          Leadership
+        </h2>
+
+        <h3 className="text-4xl font-bold text-[#112b5d] mb-6">
+          CEO of ProBilling Circle
+        </h3>
+
+        <p className="text-[#112b5d]/70 text-lg leading-relaxed mb-6">
+          As the CEO of <strong>ProBilling Circle</strong>, I am committed to
+          delivering accurate, compliant, and scalable medical billing solutions
+          that help healthcare providers maximize revenue and reduce claim denials.
+        </p>
+
+        <p className="text-[#112b5d]/70 text-lg leading-relaxed">
+          Our leadership is driven by innovation, transparency, and a deep
+          understanding of payer guidelines—ensuring long-term success for
+          our partners.
+        </p>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Software & Specialties */}
       <section id="software" className="py-24 px-6">
@@ -405,15 +459,24 @@ export default function Home() {
               <p className="text-[#112b5d]/60 mb-10 text-lg">
                 Ready to reduce denials and increase your revenue? Contact us today for a free practice analysis.
               </p>
-       <div className="space-y-6">
+  <div className="space-y-6">
   {[
-    { icon: <Mail className="w-5 h-5" />, label: "Email Us", value: "harun_hanif@outlook.com" },
-    { icon: <Globe className="w-5 h-5" />, label: "Location", value: "Remote Operations, Pakistan" },
+    { 
+      icon: <Mail className="w-5 h-5" />, 
+      label: "Email Us", 
+      value: "harun_hanif@outlook.com",
+      link: "mailto:harun_hanif@outlook.com" // ✅ Email redirect
+    },
+    { 
+      icon: <Globe className="w-5 h-5" />, 
+      label: "Location", 
+      value: "Remote Operations, Pakistan"
+    },
     { 
       icon: <Phone className="w-5 h-5" />, 
       label: "WhatsApp", 
       value: "+92 321 5513687",
-      link: "https://wa.me/923215513687" // WhatsApp link
+      link: "https://wa.me/923215513687"
     }
   ].map((item, idx) => (
     <motion.div 
@@ -422,20 +485,26 @@ export default function Home() {
       className="flex items-center gap-4 group"
     >
       <a 
-        href={item.link ? item.link : "#"} 
-        target={item.link ? "_blank" : undefined} 
-        rel={item.link ? "noopener noreferrer" : undefined}
+        href={item.link || "#"}
+        target={item.link?.startsWith("http") ? "_blank" : undefined}
+        rel={item.link?.startsWith("http") ? "noopener noreferrer" : undefined}
         className="w-12 h-12 rounded-full bg-[#1579b7]/10 flex items-center justify-center text-[#1579b7] group-hover:bg-[#1579b7] group-hover:text-white transition-all"
       >
         {item.icon}
       </a>
+
       <div>
-        <div className="text-xs font-bold text-[#112b5d]/40 uppercase tracking-widest">{item.label}</div>
-        <div className="font-bold text-[#112b5d]">{item.value}</div>
+        <div className="text-xs font-bold text-[#112b5d]/40 uppercase tracking-widest">
+          {item.label}
+        </div>
+        <div className="font-bold text-[#112b5d]">
+          {item.value}
+        </div>
       </div>
     </motion.div>
   ))}
 </div>
+
 
 
             </div>
@@ -476,7 +545,7 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-3"
           >
-            <div className="relative w-20 h-20">
+            <div className="relative w-28 h-28">
               <Image 
                 src="/probilling.png" 
                 alt="Pro Billing Circle Logo" 
