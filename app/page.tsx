@@ -553,7 +553,7 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-            <span className="text-[#112b5d] font-bold text-lg">Pro Billing Circle</span>
+           
           </motion.div>
           <div>© {new Date().getFullYear()} Pro Billing Circle. All rights reserved.</div>
           <div className="flex gap-8">
