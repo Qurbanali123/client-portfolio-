@@ -305,11 +305,12 @@ export default function Home() {
         </div>
       </section>
       {/* CEO Section */}
+{/* CEO Section */}
 <section id="ceo" className="py-24 px-6 bg-white relative">
   <div className="max-w-7xl mx-auto">
     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-      {/* CEO Image */}
+      {/* CEO Video */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -318,10 +319,14 @@ export default function Home() {
       >
         <div className="relative group">
           <div className="absolute inset-0 bg-[#1579b7]/20 rounded-3xl blur-2xl group-hover:scale-110 transition-transform duration-700" />
-          <img
-            src="/ceo.jpeg" // 🔁 replace with your image path
-            alt="CEO of ProBilling Circle"
-            className="relative w-80 h-80 object-cover rounded-3xl shadow-2xl"
+          
+          <video
+            src="/pro.mp4"   // 🔁 Put your video file inside /public folder
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative w-100 h-100 object-cover rounded-3xl shadow-2xl"
           />
         </div>
       </motion.div>
@@ -337,19 +342,18 @@ export default function Home() {
         </h2>
 
         <h3 className="text-4xl font-bold text-[#112b5d] mb-6">
-          Founder of ProBilling Circle
+          Founder & Growth Strategist, ProBilling Circle
         </h3>
 
         <p className="text-[#112b5d]/70 text-lg leading-relaxed mb-6">
-          As the Founder of <strong>ProBilling Circle</strong>, I am committed to
-          delivering accurate, compliant, and scalable medical billing solutions
-          that help healthcare providers maximize revenue and reduce claim denials.
+          As the Founder & Growth Strategist of <strong>ProBilling Circle</strong>, 
+          I lead the company’s vision and expansion by developing scalable strategies 
+          that drive revenue, optimize operations, and ensure long-term business growth.
         </p>
 
         <p className="text-[#112b5d]/70 text-lg leading-relaxed">
-          Our leadership is driven by innovation, transparency, and a deep
-          understanding of payer guidelines—ensuring long-term success for
-          our partners.
+          Our leadership is driven by innovation, transparency, and a deep 
+          understanding of payer guidelines—ensuring long-term success for our partners.
         </p>
       </motion.div>
 

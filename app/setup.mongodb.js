@@ -1,0 +1,9 @@
+use('MBDB');
+db.form.insertMany([{
+    "name":"asim",
+     "phone":3434343
+},
+{
+    "name":"farhan",
+    "phone":24343434
+}])
