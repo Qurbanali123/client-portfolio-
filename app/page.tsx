@@ -306,7 +306,7 @@ export default function Home() {
             {/* Mini stats */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1, duration: 0.8 }}
               className="flex items-center gap-8 mt-10 pt-10 border-t border-white/10">
-              {[{ val: "98%", label: "Satisfaction" }, { val: "2+", label: "Years Exp." }, { val: "100+", label: "Practices" }].map(item => (
+              {[{ val: "98%", label: "Satisfaction" },{ val: "100+", label: "Practices" }].map(item => (
                 <div key={item.label} className="text-center">
                   <div className="text-2xl font-black text-[#1579b7]">{item.val}</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/30 font-semibold mt-0.5">{item.label}</div>
@@ -340,7 +340,7 @@ export default function Home() {
                 <div className="space-y-6">
                   {[
                     { label: "Claims Processed", value: 95, color: "from-[#1579b7] to-[#5bb8f5]", delay: 0 },
-                    { label: "Reimbursement Rate", value: 88, color: "from-[#0d5a8a] to-[#1579b7]", delay: 0.3 },
+                    { label: "Reimbursement Rate", value: 10, color: "from-[#0d5a8a] to-[#1579b7]", delay: 0.3 },
                     { label: "Denial Reduction", value: 72, color: "from-[#112b5d] to-[#1579b7]", delay: 0.6 },
                   ].map(bar => (
                     <div key={bar.label}>
@@ -395,12 +395,12 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #1579b7, transparent)" }} />
 
         <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }}
-          className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+          className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8 relative z-10">
           {[
             { label: "Practices Served", numericValue: 100, suffix: "+", icon: <Building2 className="w-6 h-6 text-white" /> },
             { label: "Client Satisfaction", numericValue: 98, suffix: "%", icon: <Users className="w-6 h-6 text-white" /> },
             { label: "First-Pass Rate", numericValue: 96, suffix: "%", icon: <Target className="w-6 h-6 text-white" /> },
-            { label: "Years Experience", numericValue: 2, suffix: "+", icon: <Briefcase className="w-6 h-6 text-white" /> },
+          
           ].map((stat, i) => (
             <motion.div variants={cardVariant} key={stat.label} className="flex flex-col items-center text-center group">
               <div className="relative mb-5">
