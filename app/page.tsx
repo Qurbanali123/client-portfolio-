@@ -748,7 +748,7 @@ export default function Home() {
               <div className="space-y-6">
                 {[
                   { icon: <Mail className="w-5 h-5" />, label: "Email Us", value: "probillingcircle@gmail.com", link: "https://mail.google.com/mail/?view=cm&fs=1&to=info.harun.hanif@gmail.com" },
-                  { icon: <Globe className="w-5 h-5" />, label: "Location", value: "Remote Operations, Pakistan", link: null },
+                  { icon: <Globe className="w-5 h-5" />, label: "Location", value: "Michigan United State of America", link: null },
                   { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "+1 5863018663", link: "https://alvo.chat/7lqF" },
                   { icon: <Globe className="w-5 h-5" />, label: "WhatsApp Channel", value: "Follow ProBilling Circle (PBC)", link: "https://whatsapp.com/channel/0029VbBz1I90VycFrd7AyF47" },
                 ].map((item, idx) => (
