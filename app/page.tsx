@@ -747,9 +747,9 @@ export default function Home() {
               </p>
               <div className="space-y-6">
                 {[
-                  { icon: <Mail className="w-5 h-5" />, label: "Email Us", value: "info.harun.hanif@gmail.com", link: "https://mail.google.com/mail/?view=cm&fs=1&to=info.harun.hanif@gmail.com" },
+                  { icon: <Mail className="w-5 h-5" />, label: "Email Us", value: "probillingcircle@gmail.com", link: "https://mail.google.com/mail/?view=cm&fs=1&to=info.harun.hanif@gmail.com" },
                   { icon: <Globe className="w-5 h-5" />, label: "Location", value: "Remote Operations, Pakistan", link: null },
-                  { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "+92 321 5513687", link: "https://wa.me/923215513687" },
+                  { icon: <Phone className="w-5 h-5" />, label: "WhatsApp", value: "+1 5863018663", link: "https://alvo.chat/7lqF" },
                   { icon: <Globe className="w-5 h-5" />, label: "WhatsApp Channel", value: "Follow ProBilling Circle (PBC)", link: "https://whatsapp.com/channel/0029VbBz1I90VycFrd7AyF47" },
                 ].map((item, idx) => (
                   <motion.div whileHover={{ x: 6 }} key={idx} className="flex items-center gap-4 group">
